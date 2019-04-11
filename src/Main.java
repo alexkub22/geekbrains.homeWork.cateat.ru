@@ -8,18 +8,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Cat cat1 =new Cat("Машка",5);
-        Cat cat2=new Cat("Кузька",6);
-
         Plate plate=new Plate(10);
         System.out.println(plate);
 
+        Cat[]cats={
+                new Cat("Машка",5),
+                new Cat("Кузька",7)};
+        for (Cat c : cats) {
+            c.eat(plate);
 
-        cat1.eat(plate);
-        System.out.println(plate);
-        System.out.println("а Кузка не стал кушать и пошёл спать");
-
-
+        }
+        System.out.println("Остаток " + plate);
     }
 
 }

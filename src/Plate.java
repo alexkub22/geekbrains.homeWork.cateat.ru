@@ -11,7 +11,12 @@ public class Plate {
                 " еды.";
     }
 
-    public void decreasedFood (int x){
-        plateWithFood-=x;
+    public boolean decreasedFood (int x) {
+        if (plateWithFood < x) {
+            return false;
+        } else {
+            plateWithFood -= x;
+            return true;
+        }
     }
 }
